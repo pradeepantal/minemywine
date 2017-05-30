@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('minemywine', ['ionic', 'minemywine.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -28,38 +28,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/menu/menu.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.location', {
+    url: '/location',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/location/location.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.account', {
+      url: '/account',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/account/account.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.history', {
+      url: '/history',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/history/history.html',
+          controller: 'HistoryCtrl'
         }
       }
     })
 
-  .state('app.single', {
+  /*.state('app.single', {
     url: '/playlists/:playlistId',
     views: {
       'menuContent': {
@@ -67,7 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  });*/
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/history');
 });
