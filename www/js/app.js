@@ -67,6 +67,41 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+    
+
+    .state('account', {
+    url: '/account',
+    abstract: true,
+    templateUrl: 'templates/account/account-view.html'
+  })
+
+.state('account.mybar', {
+      url: '/mybar',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/mybar.html',
+          controller: 'MyBarCtrl'
+        }
+      }
+    })
+
+.state('account.mySettings', {
+      url: '/mySettings',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/account-setting.html'
+        }
+      }
+    })
+
+.state('account.contact-us', {
+      url: '/contact-us',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/contact-us.html'
+        }
+      }
+    })
 
   /*.state('app.single', {
     url: '/playlists/:playlistId',
