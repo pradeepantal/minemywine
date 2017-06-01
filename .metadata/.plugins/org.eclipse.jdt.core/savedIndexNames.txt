@@ -1,0 +1,1 @@
+INDEX VERSION 1.129+D:\myDevelopment\Hackathon2017\minemywine\.metadata\.plugins\org.eclipse.jdt.core
