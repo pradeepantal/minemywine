@@ -58,12 +58,12 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
-    .state('app.history', {
-      url: '/history',
+    .state('app.shop', {
+      url: '/shop',
       views: {
         'menuContent': {
-          templateUrl: 'templates/history/history.html',
-          controller: 'HistoryCtrl'
+          templateUrl: 'templates/shop/shop.html',
+          controller: 'shopCtrl'
         }
       }
     })
@@ -78,5 +78,5 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
     }
   });*/
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/history');
+  $urlRouterProvider.otherwise('/app/shop');
 });
