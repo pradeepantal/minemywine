@@ -44,7 +44,8 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
     url: '/location',
     views: {
       'menuContent': {
-        templateUrl: 'templates/location/location.html'
+        templateUrl: 'templates/location/location.html',
+        controller: 'locationCtrl'
       }
     }
   })
