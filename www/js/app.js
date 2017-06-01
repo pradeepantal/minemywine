@@ -4,9 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('minemywine', ['ionic', 'minemywine.controllers'])
+var user;
+var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCordova'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, DbService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,6 +20,13 @@ angular.module('minemywine', ['ionic', 'minemywine.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+     DbService.initDB();
+
+      //DB Service call sample
+     /* DbService.getLoginDetails(1).then(function (data) {
+          console.log(data.rows.item(0).name);
+      });*/
+
   });
 })
 
