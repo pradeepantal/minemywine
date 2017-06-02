@@ -75,6 +75,12 @@ list-text{
     background-repeat :no-repeat;
     width: 100%;
 }
+
+.vodka-img {
+    background-image: url('../img/vodka.png');
+    background-repeat :no-repeat;
+    width: 100%;
+}
 @media (min-width: 600px) {
   .tile {
     -webkit-transition: all linear .5s;
