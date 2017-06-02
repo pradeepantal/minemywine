@@ -80,7 +80,6 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       views: {
         'account-view': {
           templateUrl: 'templates/account/mybar.html',
-          controller: 'MyBarCtrl'
         }
       }
     })
