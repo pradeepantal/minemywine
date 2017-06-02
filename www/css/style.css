@@ -8,7 +8,38 @@
     height: 100%;
 }
 
-<<<<<<< HEAD
+
+ 
+.custom {
+  background-color: #EDE8D2 !important; /* This sets the background color*/
+ }
+ 
+/*Set the background to transparent for ion-item*/
+.custom .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  border-top: 1px solid;   /*Top Border for each menu item*/
+  border-bottom:2px solid;   /*Bottom border for each menu item*/
+  border-color: #c3c3c3;   /*Sets colors for top and bottom border*/
+  color: #444;    /*Text color for each item*/
+}
+ 
+/*Changes the border for the last item*/
+.custom .item:last-child {
+  border-bottom: 1px solid #fff;
+}
+ 
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+ 
+/*Just makes the type white*/
+.custom h2,
+.custom h3,
+.custom p,
+.custom a {
+  color: #444;  /*Text color for each item, overrides the color property above*/
+}
 .tile {
   color: #fff;
   height: 100px;
@@ -105,7 +136,7 @@ list-text{
   }
 }
 
-=======
+
 .header-text{
 	text-align: center;
     font-size: 23px;
@@ -131,4 +162,4 @@ list-text{
     padding: 15px;
     text-align: center;
 }
->>>>>>> 3ccca991588d336aa9a37b480b7c5c99a284ea10
+
