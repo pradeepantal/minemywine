@@ -7,7 +7,7 @@
 var user;
 var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCordova'])
 
-.run(function($ionicPlatform, DbService) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,7 +20,7 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-     DbService.initDB();
+     //DbService.initDB();
 
       //DB Service call sample
      /* DbService.getLoginDetails(1).then(function (data) {
@@ -58,12 +58,22 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
-    .state('app.history', {
-      url: '/history',
+    .state('app.shop', {
+      url: '/shop',
       views: {
         'menuContent': {
-          templateUrl: 'templates/history/history.html',
-          controller: 'HistoryCtrl'
+          templateUrl: 'templates/shop/shop.html',
+          controller: 'shopCtrl'
+        }
+      }
+    })
+
+    .state('app.shop-list', {
+      url: '/shop-list',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/shop/shop-list.html',
+          controller: 'shopCtrl'
         }
       }
     })
@@ -101,7 +111,31 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+ .state('app.accountBottle', {
+      url: '/accountBottle',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/singleBottle/bottleDescription.html',
+        }
+      }
+    })
 
+ .state('app.qr', {
+      url: '/qr',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/qr/qr.html',
+        }
+      }
+    })
+ .state('app.consume', {
+      url: '/consume',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/qr/consume.html',
+        }
+      }
+    })
   /*.state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -112,5 +146,6 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
     }
   });*/
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/history');
+  $urlRouterProvider.otherwise('/app/shop');
+
 });
