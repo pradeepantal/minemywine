@@ -120,6 +120,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
+ .state('account.accountBottleDummy', {
+      url: '/accountBottleDummy',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/singleBottle/bottledescription-afterBuyDummy.html',
+        }
+      }
+    })
+
  .state('account.accountBottleSmirnoff', {
       url: '/accountBottleSmirnoff',
       views: {
@@ -145,6 +154,24 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+ .state('account.consumeSmirnoff', {
+      url: '/consumeSmirnoff',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/qr/consumeSmirnoff.html',
+        }
+      }
+    })
+ .state('account.mybar-dummybalance', {
+      url: '/mybar-dummybalance',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/mybar-dummybalance.html',
+        }
+      }
+    })
+
+ 
   /*.state('app.single', {
     url: '/playlists/:playlistId',
     views: {
