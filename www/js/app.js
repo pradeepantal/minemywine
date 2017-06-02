@@ -112,7 +112,31 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+ .state('app.accountBottle', {
+      url: '/accountBottle',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/singleBottle/bottleDescription.html',
+        }
+      }
+    })
 
+ .state('app.qr', {
+      url: '/qr',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/qr/qr.html',
+        }
+      }
+    })
+ .state('app.consume', {
+      url: '/consume',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/qr/consume.html',
+        }
+      }
+    })
   /*.state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -124,4 +148,5 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
   });*/
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/shop');
+
 });
