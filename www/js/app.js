@@ -111,27 +111,36 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
- .state('app.accountBottle', {
+ .state('account.accountBottle', {
       url: '/accountBottle',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/singleBottle/bottleDescription.html',
         }
       }
     })
 
- .state('app.qr', {
+ .state('account.accountBottleSmirnoff', {
+      url: '/accountBottleSmirnoff',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/singleBottle/bottleDescriptionSmirnoff.html',
+        }
+      }
+    })
+
+ .state('account.qr', {
       url: '/qr',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/qr/qr.html',
         }
       }
     })
- .state('app.consume', {
+ .state('account.consume', {
       url: '/consume',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/qr/consume.html',
         }
       }
