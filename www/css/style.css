@@ -47,7 +47,17 @@
   background-size: cover;
   background-position: bottom;
 }
+.no-deco{
+	text-decoration: none;
+}
 
+list-text{  
+	color: #388e3c; 
+    padding-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .whisky-img {
     background-image: url('../img/whisky.png');
     background-repeat :no-repeat;
@@ -87,3 +97,4 @@
     font-size: 32px;
   }
 }
+

@@ -7,7 +7,7 @@
 var user;
 var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCordova'])
 
-.run(function($ionicPlatform, DbService) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,7 +20,7 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-     DbService.initDB();
+     //DbService.initDB();
 
       //DB Service call sample
      /* DbService.getLoginDetails(1).then(function (data) {
@@ -63,6 +63,16 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       views: {
         'menuContent': {
           templateUrl: 'templates/shop/shop.html',
+          controller: 'shopCtrl'
+        }
+      }
+    })
+
+    .state('app.shop-list', {
+      url: '/shop-list',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/shop/shop-list.html',
           controller: 'shopCtrl'
         }
       }
