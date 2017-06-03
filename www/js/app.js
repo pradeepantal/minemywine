@@ -251,7 +251,14 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     }
   })
-
+ .state('account.offer', {
+      url: '/offer',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/offer/offerAFriend.html',
+        }
+      }
+    })
  
   /*.state('app.single', {
     url: '/playlists/:playlistId',
