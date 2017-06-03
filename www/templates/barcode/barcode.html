@@ -1,0 +1,23 @@
+<ion-modal-view>
+<ion-content>
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>Home</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>
+            <button ng-click="scanBarcode()">Scan</button>
+            <a target="_blank" href="#display" style="text-decoration: none"><button>Display Scanned Data</button></a>
+        </p>
+    </div>    
+</div>
+
+
+  <ion-list>
+    <ion-item ng-click="scanBarcode()">
+      Scan Barcode
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-modal-view>
