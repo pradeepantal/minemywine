@@ -58,6 +58,13 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+
+   .state('sf', {
+      url: '/sf',
+      abstract: true,
+      templateUrl: 'templates/shop/shop-view.html'
+      //controller: 'AppCtrl'
+    })
     .state('app.shop', {
       url: '/shop',
       views: {
@@ -68,10 +75,10 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
-    .state('app.shop-list', {
-      url: '/shop-list',
+    .state('sf.slist', {
+      url: '/slist',
       views: {
-        'menuContent': {
+        'shop-view': {
           templateUrl: 'templates/shop/shop-list.html',
           controller: 'shopCtrl'
         }
@@ -111,31 +118,67 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
- .state('app.accountBottle', {
+ .state('account.accountBottle', {
       url: '/accountBottle',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/singleBottle/bottleDescription.html',
         }
       }
     })
 
- .state('app.qr', {
+ .state('account.accountBottleDummy', {
+      url: '/accountBottleDummy',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/singleBottle/bottledescription-afterBuyDummy.html',
+        }
+      }
+    })
+
+ .state('account.accountBottleSmirnoff', {
+      url: '/accountBottleSmirnoff',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/singleBottle/bottleDescriptionSmirnoff.html',
+        }
+      }
+    })
+
+ .state('account.qr', {
       url: '/qr',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/qr/qr.html',
         }
       }
     })
- .state('app.consume', {
+ .state('account.consume', {
       url: '/consume',
       views: {
-        'menuContent': {
+        'account-view': {
           templateUrl: 'templates/qr/consume.html',
         }
       }
     })
+ .state('account.consumeSmirnoff', {
+      url: '/consumeSmirnoff',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/qr/consumeSmirnoff.html',
+        }
+      }
+    })
+ .state('account.mybar-dummybalance', {
+      url: '/mybar-dummybalance',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/mybar-dummybalance.html',
+        }
+      }
+    })
+
+ 
   /*.state('app.single', {
     url: '/playlists/:playlistId',
     views: {
