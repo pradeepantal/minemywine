@@ -8,6 +8,7 @@
     height: 100%;
 }
 
+<<<<<<< HEAD
 
  
 .custom {
@@ -40,6 +41,8 @@
 .custom a {
   color: #444;  /*Text color for each item, overrides the color property above*/
 }
+=======
+>>>>>>> 6fdfc7c04fedf5f99da620d8745cf5a4e13cd45c
 .tile {
   color: #fff;
   height: 100px;
@@ -136,7 +139,10 @@ list-text{
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fdfc7c04fedf5f99da620d8745cf5a4e13cd45c
 .header-text{
 	text-align: center;
     font-size: 23px;
@@ -162,4 +168,7 @@ list-text{
     padding: 15px;
     text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fdfc7c04fedf5f99da620d8745cf5a4e13cd45c
