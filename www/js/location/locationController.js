@@ -28,7 +28,7 @@ app.controller('locationCtrl', function($scope, $state, $cordovaGeolocation, $co
             '<div id="bodyContent">'+
             '<p><b>Timing</b>, 11 AM - 4 AM '+
             ' Contact : 9495305 '+
-            'Heritage Site.</p><a ng-href="#/app/history">Go to bar details</a>'+
+            'Heritage Site.</p><a ng-href="#/app/history">Get here!</a>'+
            
             '</div>'+
             '</div>';
