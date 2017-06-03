@@ -84,6 +84,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+
+    .state('account.newBottle', {
+      url: '/newBottle',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/shop/newBottle.html',
+        }
+      }
+    })
     
 
     .state('account', {
@@ -145,6 +154,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
+ .state('account.newBottleBalance', {
+      url: '/newBottleBalance',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/myBar-balanceAfterBuying.html',
+        }
+      }
+    })
+
  .state('account.qr', {
       url: '/qr',
       views: {
@@ -177,7 +195,6 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
-
  
   /*.state('app.single', {
     url: '/playlists/:playlistId',
