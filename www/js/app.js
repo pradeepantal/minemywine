@@ -215,6 +215,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
     }
   })
 
+.state('account.paymentOptions', {
+    url: '/paymentOptions',
+    views: {
+      'account-view': {
+        templateUrl: 'templates/shop/paymentOptions.html'
+      }
+    }
+  })
+
  
   /*.state('app.single', {
     url: '/playlists/:playlistId',
