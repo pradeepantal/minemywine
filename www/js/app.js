@@ -58,6 +58,13 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+
+   .state('sf', {
+      url: '/sf',
+      abstract: true,
+      templateUrl: 'templates/shop/shop-view.html'
+      //controller: 'AppCtrl'
+    })
     .state('app.shop', {
       url: '/shop',
       views: {
@@ -68,12 +75,21 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
-    .state('app.shop-list', {
-      url: '/shop-list',
+    .state('sf.slist', {
+      url: '/slist',
       views: {
-        'menuContent': {
+        'shop-view': {
           templateUrl: 'templates/shop/shop-list.html',
           controller: 'shopCtrl'
+        }
+      }
+    })
+
+    .state('account.newBottle', {
+      url: '/newBottle',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/shop/newBottle.html',
         }
       }
     })
@@ -138,6 +154,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
+ .state('account.newBottleBalance', {
+      url: '/newBottleBalance',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/account/myBar-balanceAfterBuying.html',
+        }
+      }
+    })
+
  .state('account.qr', {
       url: '/qr',
       views: {
@@ -189,6 +214,7 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     }
   })
+
  
   /*.state('app.single', {
     url: '/playlists/:playlistId',
@@ -200,6 +226,6 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
     }
   });*/
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/shop');
+  $urlRouterProvider.otherwise('/app/location');
 
 });
