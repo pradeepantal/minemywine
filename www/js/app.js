@@ -59,6 +59,15 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
+ .state('app.shopNew', {
+      url: '/shopNew',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/shop/shop-newBottle.html'
+        }
+      }
+    })
+
    .state('sf', {
       url: '/sf',
       abstract: true,
@@ -85,11 +94,30 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
       }
     })
 
+    .state('sf.sNewlist', {
+      url: '/sNewlist',
+      views: {
+        'shop-view': {
+          templateUrl: 'templates/shop/shop-list-newBottle.html',
+          controller: 'shopCtrl'
+        }
+      }
+    })
+
     .state('account.newBottle', {
       url: '/newBottle',
       views: {
         'account-view': {
           templateUrl: 'templates/shop/newBottle.html',
+        }
+      }
+    })
+
+    .state('account.shopNewBottle', {
+      url: '/shopNewBottle',
+      views: {
+        'account-view': {
+          templateUrl: 'templates/shop/my-shop-newBottle.html',
         }
       }
     })
