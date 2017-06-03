@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 var user;
-var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCordova'])
+var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCordova' ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -223,6 +223,35 @@ var app = angular.module('minemywine', ['ionic', 'minemywine.controllers', 'ngCo
         }
       }
     })
+
+.state('app.barcode', {
+    url: '/barcode',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/barcode/barcode.html',
+        controller: 'barcodeCtrl'
+      }
+    }
+  })
+
+.state('account.myWallet', {
+    url: '/myWallet',
+    views: {
+      'account-view': {
+        templateUrl: 'templates/account/myWallet.html'
+      }
+    }
+  })
+
+.state('account.paymentOptions', {
+    url: '/paymentOptions',
+    views: {
+      'account-view': {
+        templateUrl: 'templates/shop/paymentOptions.html'
+      }
+    }
+  })
+
  
   /*.state('app.single', {
     url: '/playlists/:playlistId',
