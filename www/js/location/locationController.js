@@ -24,7 +24,7 @@ app.controller('locationCtrl', function($scope, $state, $cordovaGeolocation, $co
   var content = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Hard Rock Bar</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Hard Rock Cafe</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Timing</b>, 11 AM - 4 AM '+
             ' Contact : 9495305 '+
